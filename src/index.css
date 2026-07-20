@@ -1,0 +1,443 @@
+:root {
+  --sg-blue: #289cf1;
+  --sg-pink: #f73360;
+  --sg-coral: #e25d65;
+  --sg-yellow: #effe41;
+  --black: #1a1a1a;
+  --grey: #6b6b6b;
+  --bg-card: #f7f7f7;
+  --border: #e5e5e5;
+  --sg-gradient: linear-gradient(165deg, var(--sg-blue) 0%, var(--sg-pink) 55%, var(--sg-coral) 100%);
+  font-family: "Calibri", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--black);
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.2rem 3rem;
+}
+
+/* ---------- Fond dégradé permanent (pages joueur) ---------- */
+
+.page-vibrant {
+  min-height: 100vh;
+  background: var(--sg-gradient);
+}
+
+.page-vibrant .app {
+  color: #fff;
+}
+
+/* ---------- Header ---------- */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.page-vibrant .app-header {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand-badge {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-badge img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.page-vibrant .muted-status,
+.page-vibrant .header-actions .link-btn {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Login gate ---------- */
+
+.login-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.2rem;
+  background: var(--sg-gradient);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login-crest {
+  height: 76px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.login-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.login-sg-logo {
+  height: 56px;
+  width: auto;
+  margin: 0.6rem 0 1.4rem;
+}
+
+.login-sub {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  margin: 0 0 1.8rem;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--sg-yellow);
+  color: var(--black);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  filter: brightness(0.95);
+}
+
+.login-error {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---------- Hero (page classement) ---------- */
+
+.hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.hero-compact h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.hero-sg-logo {
+  height: 40px;
+  width: auto;
+  margin-top: 0.7rem;
+}
+
+/* ---------- Tabs ---------- */
+
+.tab-nav {
+  margin-bottom: 1.2rem;
+}
+
+.tab-nav-scroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.3rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  justify-content: center;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  background: var(--sg-yellow);
+  border-color: var(--sg-yellow);
+  color: var(--black);
+}
+
+/* ---------- Panel / selects ---------- */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.2rem 1rem;
+  color: var(--black);
+}
+
+.panel select {
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  max-width: 100%;
+}
+
+.match-subtitle {
+  color: var(--grey);
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+/* ---------- My rank bar ---------- */
+
+.my-rank-bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--black);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.my-rank-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sg-yellow);
+  font-weight: 700;
+}
+
+.my-rank-value {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.my-rank-pseudo {
+  font-weight: 600;
+  text-align: left;
+}
+
+.my-rank-score {
+  font-weight: 700;
+  color: var(--sg-yellow);
+}
+
+/* ---------- Ranking table (mobile-first, centré) ---------- */
+
+.ranking-table {
+  width: 100%;
+  max-width: 420px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.ranking-table th {
+  background: var(--sg-pink);
+  color: #fff;
+  padding: 0.5rem 0.4rem;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.ranking-table th.col-score {
+  font-size: 0.66rem;
+}
+
+.ranking-table td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.ranking-table .col-rank {
+  width: 2.8rem;
+  font-weight: 700;
+}
+
+.ranking-table .col-score {
+  width: auto;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--sg-pink);
+}
+
+.ranking-table td.col-score {
+  font-size: 1rem;
+}
+
+.ranking-table tr:nth-child(even) {
+  background: var(--bg-card);
+}
+
+.ranking-table tr.highlight {
+  background: #ffe3e9;
+  font-weight: 700;
+}
+
+.ranking-table tr.podium-1 {
+  background: #fff6e0;
+}
+
+.ranking-table tr.podium-2 {
+  background: #f2f2f2;
+}
+
+.ranking-table tr.podium-3 {
+  background: #fbeee2;
+}
+
+.medal {
+  font-size: 1.1rem;
+}
+
+/* ---------- Partners ---------- */
+
+.partners {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.partners-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem 2.4rem;
+  margin: 0 auto;
+}
+
+.partner-logo {
+  width: auto;
+  object-fit: contain;
+}
+
+.partners-lg .partner-logo {
+  height: 40px;
+}
+
+.partners-md .partner-logo {
+  height: 24px;
+  opacity: 0.9;
+}
+
+.partners-divider {
+  display: flex;
+  justify-content: center;
+  margin: 1.4rem 0;
+}
+
+.partners-divider span {
+  display: inline-block;
+  width: 2px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.6);
+  transform: rotate(20deg);
+}
+
+/* ---------- Divers ---------- */
+
+.muted-status {
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.empty-state {
+  color: var(--grey);
+  font-style: italic;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--grey);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.link-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
